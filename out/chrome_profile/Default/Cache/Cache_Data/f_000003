@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign In</title>
+    <!-- Fix for Safari Back to Forward Cache issue -->
+    <script type="text/javascript" nonce="92894d9f68b34c1290491842ec8" src="//local.adguard.org?ts=1769240809912&amp;type=content-script&amp;dmn=mlslpub.blob.core.windows.net&amp;url=https%3A%2F%2Fmlslpub.blob.core.windows.net%2Fsocial-sign-in%2Fsign-in-policies%2Fmaster_cert_fix%2FsvdemoSignInLocalwithSocialNewProV4.html%3Fv%3D1.0.0.1&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="92894d9f68b34c1290491842ec8" src="//local.adguard.org?ts=1769240809912&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><script data-preload="true">
+      (function () {
+        window.onpageshow = function(event) {
+          if (event.persisted) {
+            window.location.reload();
+          }
+        };
+      })();
+    </script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- TODO: favicon -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" data-preload="true" />    
+    
+    <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" /> -->
+
+    <script src="https://kit.fontawesome.com/9b109dc7e7.js" crossorigin="anonymous"></script>
+
+    <link href="https://mlslpub.blob.core.windows.net/social-sign-in/sign-in-policies/master_cert_fix/css/globalv2.css?v=1.1.3" rel="stylesheet" type="text/css" data-preload="true"/>
+  
+    <script src="https://cdn.jsdelivr.net/npm/url-search-params-polyfill@8.1.0/index.min.js" data-preload="true"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-OUFW7hFO0/r5aEGTQOz9F/aXQOt+TwqI1Z4fbVvww04=" crossorigin="anonymous" data-preload="true"></script>
+
+    <style>
+      body {
+        font-size: 15px;
+      }
+
+      .entry-item {
+        margin-bottom: 1rem;
+      }
+
+      .entry-item input {
+        margin-bottom: 0!important;
+      }
+
+      h2.font-weight-bold {
+        font-size: 26px;
+      }
+
+      .entry-item input[type=text]:focus, .entry-item input[type=password]:focus {
+        border: 1px solid #0082ca!important;
+        box-shadow: 2px 2px 3px rgba(0,130,202,0.2)!important;
+      }
+
+      div#hero-holder {
+          background: url(https://mlslpub.blob.core.windows.net/social-sign-in/sign-in-policies/development/images/login_pro_dashboard_highlight.jpg);
+          padding: 3rem;
+          padding-top: 1rem;
+          background-repeat: repeat;
+          background-size: cover;
+      }
+
+      div#hero-holder img {
+        margin: 2rem auto 3rem;
+    }
+
+      #hero-holder .lead {
+        margin: initial;
+        padding: initial;
+        text-align: initial;
+        color: black;
+        max-width: 750px;
+        font-size: 17px;
+      }
+
+      div#hero-holder img#aculist-leader-graphic {
+        width: 75%;
+        max-width: 500px;
+    }
+
+      a#forgotPassword {
+          float: none;
+          clear: unset;
+          margin-top: 0;
+      }
+
+      .entry-item label {
+        margin-bottom: 0;
+        font-weight: bold;
+      }
+
+      .input_border {
+          display: block;
+          content: '';
+          border-bottom: solid 5px #0082ca;
+          transform: scaleX(0);
+          transition: transform 250ms ease-in-out;
+          margin-top: -2px;
+      }
+
+      .entry-item input:focus + .input_border {
+        transform: scaleX(1);
+      }
+
+      .options > div:first-child {
+          margin-bottom: 1rem;
+      }
+
+      .options button {
+        width: 100%;
+        max-width: 350px;
+      }
+
+      .modal-backdrop.show:empty {
+          display: none;
+      }
+
+      .display-mobile {
+        display: none;
+      }
+
+      .social {
+        margin-top: 0;
+        margin-bottom: 30px;
+      }
+
+      .divider {
+        max-width: 100%;
+      }
+
+      button#FacebookExchange, button#GoogleExchange, #OTPExchange {
+        max-width: 100%;
+      }
+
+      #accountRegisterHolder {
+        float: right;
+        margin-bottom: 0;
+        margin-top: -1.75rem;
+      }
+
+      #accountRegisterHolder, 
+      #accountRegisterHolder * {
+        font-size: 14px;
+      }
+
+
+      @media (max-width: 767px) {
+        #hero-col {
+          display: none!important;
+        }
+
+        #accountRegisterHolder {
+          float: none;
+          margin-bottom: 1rem;
+          margin-top: 0;
+        }
+
+        .hidden-mobile {
+          display: none;
+        }
+
+        .display-mobile {
+          display: block;
+        }
+      }
+
+      @media (max-width: 830px) {
+        .hide-sm {
+          display: none!important;
+        }
+      }
+
+      @media (max-width: 1000px) {
+        .hide-md {
+          display: none!important;
+        }
+      }
+
+      @media (max-height: 1024px) {
+        div#hero-holder {
+          background-size: inherit;
+        }
+      }
+
+      #UserId, #logonIdentifier, #password, #signInName {
+        margin-top: 5px;
+      }
+
+      .panel-body {
+        padding: 1rem !important;
+        padding-top: .5rem !important;
+      }
+
+      #panel .entry-item {
+        margin-bottom: 0.5rem;
+      }
+
+      .buttons {
+        margin: 9px 0;
+      }
+
+      .divider h2 {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        text-transform: initial;
+      }
+
+      .divider h2:after, .divider h2:before {
+          width: 28%;
+      }
+
+      p#agreementHolder {
+        margin-bottom: 5px;
+      }
+
+      button#FacebookExchange {
+        float: right!important;
+      }
+
+      button#FacebookExchange, button#GoogleExchange, #OTPExchange {
+        width: 48%;
+        font-size: 1rem;
+        display: inline-block;
+        float: left;
+        border-radius: 5px !important;
+    }
+
+    div.error.pageLevel[style*="display: block"] p {
+      margin: 0;
+    }
+
+    div.error.pageLevel[style*="display: block"] p a {
+      color: wheat;
+      text-decoration: underline;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid self_asserted_container">
+      <div class="row">
+				<div class="col-sm-12 px-0 hidden"><div class="alert alert-danger text-center" role="alert" style="border-radius: 0;"><strong>Security Notice:</strong> Cotality, vendor of Matrix Search, has experienced a security incident. As a precaution, they are advising that all user passwords be reset. The security of your information is our top priority.
+<a href="https://support.mlslistings.com/s/article/How-to-Reset-Password" class="btn btn-light btn-sm ms-2 mt-2" style="text-decoration: none;position: relative;top: -6px;right: -1rem;" target="_blank">Read More</a></div></div>
+				<div class="col-sm-12 col-md-6 col-lg-5 col-xl-4 px-0">
+          <div class="panel panel-default px-0">
+            <div id="panel" class="panel-body">
+
+              <h2 class="font-weight-bold hidden-mobile">Sign In</h2>
+
+              <div class="clearfix display-mobile mb-2">
+                <h2 class="font-weight-bold float-left mt-3">Sign In</h2>
+                <img src="https://mlslpub.blob.core.windows.net/images/new_logo_mlslistings_pro_dashboard.svg" alt="MLS Logo Mobile" style="height: 50px;float: right;position: relative;" />        
+              </div>
+          
+              <p id="accountRegisterHolder" class="text-left">
+                New subscriber? <a id="registerForAccount" class="btn btn-link p-0" href="" style="margin-top: -3px;">Create an account</a>
+              </p>
+
+              <p class="mb-4 hidden">Please enter the username and password to sign into your account, OR continue using Facebook, Google.</p>
+
+              <div id="api"></div>
+
+              <p id="agreementHolder">By clicking the Sign In button, I agree to the <a href="https://www.mlslistings.com/more/terms" target="_blank" rel="noopener">Terms of Service</a> and <a href="https://www.mlslistings.com/more/privacy/pro/" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+
+              <div id="accountHelpers" class="text-center d-block clearfix">
+                <a id="forgotUsername" class="d-block mb-1 pull-left" href="https://mlsllogin-dev.mlslistings.com/account/signinname" target="_blank">Forgot username?</a>
+              </div>
+
+              
+
+            </div>
+          </div>
+        </div>
+        <div id="hero-col" class="col-md-6 col-lg-7 col-xl-8 px-0">
+          <div id="hero-holder" class="px-md-1 px-lg-5">
+            <!-- <img src="https://mlslpub.blob.core.windows.net/social-sign-in/self-asserted/images/MLSL_Pro_logo.svg" alt="MLS Logo"> -->
+            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" version="1.1" viewBox="0 0 150.3 52" style="height: 62px;">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #f3b221;
+                  }
+            
+                  .cls-1, .cls-2, .cls-3 {
+                    stroke-width: 0px;
+                  }
+            
+                  .cls-2 {
+                    fill: #1582c5;
+                  }
+            
+                  .cls-3 {
+                    fill: #55575b;
+                  }
+                </style>
+              </defs>
+              <g>
+                <g>
+                  <path class="cls-3" d="M45.9,12.1h1.4v18.6h5.2v1.2h-6.6V12.1Z"/>
+                  <path class="cls-3" d="M56.4,12.1v19.8h-1.4V12.1h1.4Z"/>
+                  <path class="cls-3" d="M61.1,27c0,1.5,0,2.3.6,3,.7.8,1.7.9,2.3.9,2,0,2.6-1.2,2.6-3.2s-.6-3.1-2.9-5.3c-2.2-2.2-3.5-3.5-3.5-6.2s.2-4.4,3.7-4.4,3.7,2.7,3.7,4.6v1.4h-1.4v-1.8c0-1.2,0-3-2.3-3s-2.4,1.1-2.4,3,.4,2.8,3.4,5.8c2.1,2.1,3,3,3,5.8s-.2,4.7-4.1,4.7-4.2-1.2-4.2-4v-2.8h1.4v1.6h0Z"/>
+                  <path class="cls-3" d="M78,12v1.2h-3.6v18.6h-1.4V13.3h-3.5v-1.2h8.4Z"/>
+                  <path class="cls-3" d="M81.5,12.1v19.8h-1.4V12.1h1.4Z"/>
+                  <path class="cls-3" d="M93.5,12.1v19.8h-2.1l-4.7-19c0,2.3.1,2.9.1,4.9v14.1s-1.2,0-1.2,0V12.1h2l4.8,19.3c0-1.1-.2-2.8-.2-4.8v-14.5c-.1,0,1.2,0,1.2,0h0Z"/>
+                  <path class="cls-3" d="M97.6,16.4c0-1.2,0-4.5,4.1-4.5s1.7.2,2.4.6c1.4.9,1.4,2.6,1.4,3.2v2.8h-1.4v-2.1c0-1.4,0-3.4-2.6-3.4s-1.8.5-2.1.9c-.5.7-.5,1.4-.5,3v9.4c0,1.6,0,2.3.3,2.9.4,1.1,1.3,1.6,2.3,1.6s2.8-1.2,2.8-3.7v-3.2h-2.9v-1.2h4.3v9.1h-1.1v-1.6c-.4.5-1.2,1.9-3.3,1.9s-2,0-3-1.5c-.3-.4-.7-1.2-.7-3.9v-10.5h0Z"/>
+                  <path class="cls-3" d="M110.3,27c0,1.5,0,2.3.6,3,.7.8,1.7.9,2.3.9,2,0,2.6-1.2,2.6-3.2s-.6-3.1-2.9-5.3c-2.2-2.2-3.5-3.5-3.5-6.2s.2-4.4,3.7-4.4,3.7,2.7,3.7,4.6v1.4h-1.4v-1.8c0-1.2,0-3-2.3-3s-2.4,1.1-2.4,3,.4,2.8,3.4,5.8c2.1,2.1,3,3,3,5.8s-.2,4.7-4.1,4.7-4.2-1.2-4.2-4v-2.8h1.4v1.6h0Z"/>
+                </g>
+                <g>
+                  <path class="cls-1" d="M0,12.1h5.9l2.3,13.9,2.3-13.9h5.9v19.8h-3.6l.4-17.2-3.2,17.2h-3.4L3.3,14.7l.3,17.2H0V12.1h0Z"/>
+                  <path class="cls-1" d="M20.5,12.1h3.6v16.8h5.4v3h-9V12.1h0Z"/>
+                  <path class="cls-1" d="M31,24.9h3.7v2.3c0,1.2,0,2.3,1.8,2.3s1.8-1.2,1.8-3-.3-2-1.2-2.7l-3.5-2.3c-1.9-1.2-2.3-2.7-2.3-4.7s.2-3,1.4-4.1c.7-.6,2.1-1.2,4-1.2s5.1.9,5.1,4.3v2h-3.7v-1.4c0-.9,0-2-1.6-2s-1.7.4-1.7,2,.4,2,1.2,2.6l3.6,2.5c.7.5,1.4,1.2,1.9,2,.5.9.5,1.5.5,3.1s0,2.9-.7,3.9c-1.1,1.8-3.4,2-4.7,2-3.1,0-5.5-1.2-5.5-4.5v-2.8h0Z"/>
+                </g>
+              </g>
+              <g>
+                <path class="cls-2" d="M112,7.3c1.3-3.1,3.4-5.2,6.4-6.4,2.9-1.2,5.9-1.1,8.8.1s5,3.4,6.2,6.3c1.2,3,1.2,5.9,0,8.8s-3.4,5-6.3,6.2c-2.8,1.1-5.8,1.1-8.8,0l.9-2.1c2.4.9,4.8,1,7.1,0,2.3-.9,4-2.6,5-4.9s1-4.7,0-7.1c-.9-2.3-2.6-4-4.9-5-2.3-1-4.7-1.1-7,0-2.3.9-4.1,2.7-5.1,5.2l-2.2-.9Z"/>
+                <path class="cls-2" d="M148.9,25.9l-14.1-8.9-2.5,3.4,12.8,10.8c1.5,1.1,3.6.7,4.6-.7,1.1-1.4.7-3.5-.7-4.6"/>
+              </g>
+              <g>
+                <path class="cls-2" d="M0,39.7h3.7c2,0,3.5,1.2,3.5,3.6s-1.4,3.6-3.7,3.6h-1.3v5H0v-12.2ZM2.2,45.1h1.1c1.2,0,1.7-.6,1.7-1.9s-.6-1.8-1.6-1.8h-1.2v3.7Z"/>
+                <path class="cls-2" d="M11.4,46.6v5.2h-2.2v-12.2h3.7c2.2,0,3.5,1.2,3.5,3.3s-.9,2.5-1.6,2.8c.9.4,1.4,1.2,1.4,3v.5c0,1.4,0,1.9.2,2.6h-2.1c-.2-.6-.2-1.5-.2-2.6v-.4c0-1.6-.4-2.2-1.8-2.2h-.9ZM11.4,44.9h1c1.3,0,1.8-.6,1.8-1.8s-.5-1.7-1.6-1.7h-1.2v3.5Z"/>
+                <path class="cls-2" d="M26.3,45.7c0,4.5-1.2,6.4-4,6.4s-3.9-1.9-3.9-6.4,1.5-6.2,4-6.2,3.9,2,3.9,6.2ZM20.6,45.6c0,2.9.4,4.6,1.7,4.6s1.7-1.6,1.7-4.6-.4-4.3-1.7-4.3-1.7,1.6-1.7,4.3Z"/>
+                <path class="cls-2" d="M33,39.7h3.2c3.1,0,4.4,2,4.4,5.8s-1.2,6.3-4.5,6.3h-3v-12.2ZM35.2,50.1h.8c1.7,0,2.3-1.3,2.3-4.6s-.5-4-2.3-4h-.8v8.6Z"/>
+                <path class="cls-2" d="M44.3,48.8l-.6,3.1h-2.2l2.8-12.2h2.8l2.9,12.2h-2.3l-.6-3.1h-2.8ZM46.7,46.9c-.5-2.3-.8-4-1-5.2h0c-.1,1.1-.5,3-1,5.2h2Z"/>
+                <path class="cls-2" d="M53.3,48.4c.1,1,.5,1.9,1.6,1.9s1.5-.7,1.5-1.6-.5-1.6-2-2.3c-2.1-1-2.9-1.9-2.9-3.7s1.3-3.3,3.5-3.3,3.4,1.9,3.5,3.4h-2.1c0-.7-.2-1.7-1.4-1.7s-1.2.6-1.2,1.4.4,1.3,1.8,2c2.2,1,3.2,2,3.2,4s-1.2,3.5-3.8,3.5-3.7-1.8-3.7-3.6h2.2Z"/>
+                <path class="cls-2" d="M60.9,39.7h2.2v4.8h2.9v-4.8h2.2v12.2h-2.2v-5.5h-2.9v5.5h-2.2v-12.2Z"/>
+                <path class="cls-2" d="M71,39.7h3.7c2.1,0,3.3,1.2,3.3,3.1s-.7,2.3-1.4,2.5c.9.4,1.8,1.1,1.8,3s-1.5,3.6-3.7,3.6h-3.7v-12.2ZM74.2,44.5c1.4,0,1.7-.5,1.7-1.6s-.6-1.6-1.6-1.6h-1.1v3.1h1.1ZM73.1,50.1h1.3c1.1,0,1.7-.6,1.7-1.9s-.5-2-2-2h-1.1v3.9Z"/>
+                <path class="cls-2" d="M88.2,45.7c0,4.5-1.2,6.4-4,6.4s-3.9-1.9-3.9-6.4,1.5-6.2,4-6.2,3.9,2,3.9,6.2ZM82.5,45.6c0,2.9.4,4.6,1.7,4.6s1.7-1.6,1.7-4.6-.4-4.3-1.7-4.3-1.7,1.6-1.7,4.3Z"/>
+                <path class="cls-2" d="M92,48.8l-.6,3.1h-2.2l2.8-12.2h2.8l2.9,12.2h-2.3l-.6-3.1h-2.8ZM94.4,46.9c-.5-2.3-.8-4-1-5.2h0c-.1,1.1-.5,3-1,5.2h2Z"/>
+                <path class="cls-2" d="M101.7,46.6v5.2h-2.2v-12.2h3.7c2.2,0,3.5,1.2,3.5,3.3s-.9,2.5-1.6,2.8c.9.4,1.4,1.2,1.4,3v.5c0,1.4,0,1.9.2,2.6h-2.1c-.2-.6-.2-1.5-.2-2.6v-.4c0-1.6-.4-2.2-1.8-2.2h-.9ZM101.7,44.9h1c1.3,0,1.8-.6,1.8-1.8s-.5-1.7-1.6-1.7h-1.2v3.5Z"/>
+                <path class="cls-2" d="M109.2,39.7h3.2c3.1,0,4.4,2,4.4,5.8s-1.2,6.3-4.5,6.3h-3v-12.2ZM111.4,50.1h.8c1.7,0,2.3-1.3,2.3-4.6s-.5-4-2.3-4h-.8v8.6Z"/>
+              </g>
+            </svg>
+            <h3 class="d-block mt-3 mb-2">
+              Welcome to the MLSListings Pro Website!
+            </h3>
+            <div class="lead">
+              A freshly renovated, mobile-ready MLSListings Pro website is here for you! Just as easy to use on a PC or mobile device, its clean, user-friendly design and customizable features enable you to tailor your own dashboard to fit your personal needs.
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <script>
+
+    function getRegisterUri() {
+      // Get the current URL from the browser
+      const currentUrl = window.location.href;
+
+      // Create a URL object
+      const parsedUrl = new URL(currentUrl);
+
+      // Use URLSearchParams to parse the query string
+      const queryParams = new URLSearchParams(parsedUrl.search);
+
+      // Get the value of register_uri or return an empty string if it's not present
+      return queryParams.get('register_uri') ? decodeURIComponent(queryParams.get('register_uri')) : '';
+    }
+
+    function getForgotUserNameUri() {
+      // Get the current URL from the browser
+      const currentUrl = window.location.href;
+
+      // Create a URL object
+      const parsedUrl = new URL(currentUrl);
+
+      // Use URLSearchParams to parse the query string
+      const queryParams = new URLSearchParams(parsedUrl.search);
+
+      // Get the value of register_uri or return an empty string if it's not present
+      return queryParams.get('forgotusername_uri') ? decodeURIComponent(queryParams.get('forgotusername_uri')) : '';
+    }
+
+    $(function() {
+      $('#localAccountForm').insertAfter('.heading');
+      $('.divider').insertAfter('#localAccountForm');
+      $('.divider').find('h2').text("Or sign in with")
+      $('button').addClass('btn');
+
+      $('#forgotPassword').appendTo("#accountHelpers").addClass('text-right pull-right d-block').text('Forgot password?');
+
+      $('#accountHelpers').insertBefore('.entry-item + .working');
+
+      $('#agreementHolder').insertBefore('#localAccountForm + .divider');
+
+      var input_border = '<span class="input_border"/>';
+
+      $('.entry-item input').each(function(i, e){
+        $(input_border).insertAfter(e);
+      });
+
+      const registerUri = getRegisterUri();
+      const forgotUserNameUri = getForgotUserNameUri();
+
+      if(!registerUri) {
+        $('#accountRegisterHolder').addClass('d-none');
+      } else {
+        $('#registerForAccount').attr('href', registerUri);
+      }
+
+      if(!forgotUserNameUri) {
+        $('#forgotUsername').removeClass('d-block').addClass('d-none');
+      } else {
+        $('#forgotUsername').attr('href', forgotUserNameUri);
+      }
+
+      $('.password-label > label').addClass('clearfix w-100').append('<button id="show-password" type="button" class="btn btn-link password-hidden pull-right p-0"><span id="password-hidden">Show <i class="fa fa-eye"></i></span><span id="password-shown">Hide <i class="fa fa-eye-slash"></i></span></button>')
+
+      $(document).on('click', '#show-password', function(){
+        if($(this).hasClass('password-hidden')){
+          $('#password').attr('type', 'text');
+        } else {
+          $('#password').attr('type', 'password');
+        }
+
+        $(this).toggleClass('password-hidden password-shown');
+      });
+
+      $('#FacebookExchange').text('Facebook').prepend('<img src="https://mlslpub.blob.core.windows.net/social-sign-in/sign-in-policies/development/images/facebook-logo-color.svg" />');
+      $('#GoogleExchange').text('Google').prepend('<img src="https://mlslpub.blob.core.windows.net/social-sign-in/sign-in-policies/development/images/google-icon.svg" />');
+
+  });
+
+    // Select the target node (the <p> element inside the div)
+    const targetNode = document.querySelector('.error.pageLevel p');
+
+    // Create a MutationObserver instance
+    const observer = new MutationObserver((mutationsList) => {
+      for (let mutation of mutationsList) {
+        if (mutation.type === 'childList' && targetNode.textContent.includes("We can't seem to find your account")) {
+          // Create the initial part of the message
+          const initialText = document.createTextNode('We can’t find your account in the system. You may ');
+
+          // Create and style the bold 'not' text
+          const boldText = document.createElement('strong');
+          boldText.textContent = 'not ';
+
+          // Continue the message after 'not'
+          const continuationText = document.createTextNode('have created an MLSListings account yet. ');
+
+          // Create the 'Create an Account' link
+          const registerLink = document.createElement('a');
+          registerLink.href = document.getElementById('registerForAccount').href;
+          registerLink.textContent = 'Create an Account';
+
+          // Add ' now.' after the link
+          const finalText = document.createTextNode(' now.');
+
+          // Clear the existing content and append the new nodes
+          targetNode.textContent = '';
+          targetNode.append(initialText, boldText, continuationText, registerLink, finalText);
+        }
+
+        if (mutation.type === 'childList' && targetNode.textContent.includes("The password has expired.")) {
+					console.log(targetNode.textContent);
+          // Create the initial part of the message
+          const initialText = document.createTextNode('Your password has expired. Please click ');
+
+          // Create the 'Reset Password' link
+          const resetLink = document.createElement('a');
+          resetLink.href = document.getElementById('forgotPassword').href;
+          resetLink.textContent = 'Reset Password';
+
+          // Continue the message after 'not'
+          const continuationText = document.createTextNode(' to continue.');
+
+          // Clear the existing content and append the new nodes
+          targetNode.textContent = '';
+          targetNode.append(initialText, resetLink, continuationText);
+        }
+
+      }
+    });
+
+
+    // Set up the observer configuration to watch for changes in child nodes
+    const config = { childList: true };
+
+    // Start observing the target node
+    observer.observe(targetNode, config);
+  </script>
+
+  	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-86937TYHTR"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-86937TYHTR');
+
+		function sendGA4Event(ea, type, ec, dt, path){
+				// Configuring the parameters based on GA4 specifications
+				var eventParameters = {
+						'event_category': ec,
+						'event_label': dt,
+						'page_path': path
+				};
+
+				gtag('event', ea, eventParameters);
+		}
+
+		sendGA4Event("azureb2c", "pageview", "azureb2c", "azureb2c", "/azureb2c/combinedSignIn");
+
+		$(document).on('click', '#forgotPassword', function(e){
+					e.preventDefault();
+					var $url = $(this).attr('href');
+					sendGA4Event("azureb2c-combinedSignIn", "click", "Click Forgot Password Link", "", "/azureb2c/combinedSignIn");
+					window.location = $url;
+			});
+	</script>
+</html>

@@ -1,0 +1,1343 @@
+body.legacy
+{
+    font-size: 9pt;
+    font-family: verdana, helvetica, sans-serif;
+    margin-left: 4px;
+    margin-top: 0px;
+    margin-right: 4px;
+    margin-bottom: 0px;
+    vertical-align: top;
+    background-color:#F8F4EA;
+}
+.ImageBackGround
+{
+    background-color:#F8F4EA;
+    background-image:url("../../App_Themes/RS_Default/Images/img_home_monterey.jpg");
+    background-position:left bottom;
+    background-repeat:no-repeat;    
+}
+.RepeaterBorder
+{
+	border:solid 1px #efefef;
+	width:1024px;
+}
+.title
+{
+	vertical-align:middle;
+	color:#303030;
+	font-size:10pt;
+	font-weight:Bold;
+	background-color:Gainsboro;
+}
+
+/* Dialog styles */
+
+.DialogTitle 
+{
+   
+    font-size: 14pt;
+    text-align:left;
+}
+
+.HeaderTitle 
+{
+   
+    font-size: 14pt;
+    color:#303030;	
+	background-color:Gainsboro
+}
+
+.AsstSeatTitle 
+{   
+    font-size: 12pt;
+    color:#008080;    	
+}
+
+.DialogInstructions 
+{
+    font-size: 10pt;
+}
+.DialogSelection 
+{
+    font-size: 10pt;
+}
+.DialogBoldLabels
+{
+	font-size:10px;
+	font-weight:bold;
+	text-align:left;
+}
+
+
+.DialogLabels
+{
+	font-size:10px;
+	text-align:left;
+}
+/* Navigation Styles */
+
+
+.TopMenu
+{
+    text-align:right;
+    vertical-align:bottom;
+    margin-right:10px;
+    color: #333290;    
+}
+.TopMenuItem
+{
+    padding:3px 3px 3px 3px;
+    color: #333290;
+    font-size:8pt;
+}
+.AsstHeader
+{	 
+    color: #333333;
+    font-size:8pt;    
+}
+.MainMenu
+{
+    width:100%;
+}
+.TabMenuItem
+{  
+    font-weight:bold;
+    text-align:center;
+    background-color:#338888;
+    color: white; 
+    height:28px;
+    padding: 0px 0px 0px 0px;
+    border-bottom:solid 1px white;
+ }
+ .TabMenuItemSelected
+{
+    background-color: #F8F4EA;
+    text-align:center;
+    font-weight:bold;
+    height:29px;
+    color: black;
+    padding:0px 0px 0px 0px;
+    margin-top: -1px;
+    border-right: #338888 1px solid;
+    border-top: #338888 1px solid;
+    border-left: #338888 1px solid;
+    border-bottom: #F8F4EA 1px solid;
+    position: relative;
+    bottom: -1px;
+   
+   
+    
+    
+}
+.HoverMenu
+{
+    cursor:hand;
+}
+.TabMenuContainer
+{
+    border-bottom : solid 1px #338888;
+    background-color:White;
+    vertical-align: bottom;
+}
+.SiteStaticMenu
+{
+  background-color: white;
+}
+.TabMenuSpacer
+{
+  background-color: white;
+  
+}
+.banner
+{
+    background-color:White;
+    width:100%;
+}
+
+.SiteMapNode
+{
+    font-style:normal;
+    font-size: 9pt;
+    color:Black;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+A.rsHyperlink
+{
+    font-style:normal;
+    font-size: 9pt;
+    color: #333290;
+    text-decoration:underline;
+    vertical-align:middle; 
+}
+A.rsHyperlink:hover  
+{
+    font-style:normal;
+    font-size: 9pt;
+    color: red;
+    text-decoration:underline;
+    vertical-align:middle;  
+}
+A.rsHyperlinkNoUnderline
+{
+    font-style:normal;
+    font-size: 9pt;
+    color: #333290;
+    text-decoration:none;
+    vertical-align:middle; 
+}
+A.rsHyperlinkNoUnderline:hover  
+{
+    font-style:normal;
+    font-size: 9pt;
+    color: red;
+    text-decoration:none;
+    vertical-align:middle;
+    
+}
+
+A.rsHyperlinkResult
+{
+    font-size: 8pt;
+    color: #333290;
+    text-decoration:underline;
+}
+
+A.rsHyperlinkResult:hover
+{
+    font-size: 8pt;
+    color: red;
+    text-decoration:underline;
+}
+
+A.rsStaticMenuLabel
+{
+    color: black;
+    font-size: 8pt;
+}
+
+A.rsStaticMenuLabel:hover
+{
+    color: black;
+    font-size: 8pt;
+}
+
+A.rs 
+{
+    font-style:normal;
+    font-size: 9pt;
+    color: #333290;
+    text-decoration:none;
+}
+
+A.rs:Hover
+{
+    font-style:normal;
+    font-size: 9pt;
+    color: #333290;
+    text-decoration:none;
+}
+
+A.rs:Visited
+{
+    font-style:normal;
+    font-size: 9pt;
+    color: #333290;
+    text-decoration:none;
+}
+
+
+Table.rs
+{
+    border-style: none;
+}
+
+TR.rs 
+{
+    border-style: none;
+}
+
+TD.rs 
+{
+    border-style: none;
+    vertical-align: top;
+}
+
+.LeftMargin
+{
+   margin:0px 0px, 0px, 20px;
+}
+
+.RightMargin
+{
+    margin:0px 16px 0px 0px;
+}
+
+/* Open House Summary */
+.OHSummaryInternalFrame
+{
+    border-left: solid 1px #EDA41A;
+    border-right: solid 1px #EDA41A;
+    border-bottom: solid 1px #EDA41A;
+    border-top: solid 1px #EDA41A;
+    text-align:left;
+    vertical-align:top;
+}
+
+.OHSummaryExternalFrame
+{
+    border-left: solid 2px #FFFFFF;
+    border-bottom:solid 2px #FFFFFF;
+    border-right:solid 2px #FFFFFF;
+    border-top:solid 0px #FFFFFF;
+}
+
+.OHSummaryRightBottomBorder
+{
+    border-bottom: solid 1px #BCAC95;
+    border-right: solid 1px #BCAC95;
+}
+
+.OHSummaryFarRightBottomBorder
+{
+    border-bottom: solid 1px #E1D2B1;
+    border-right: solid 1px #E1D2B1;
+}
+
+.OHSummaryTitleBottomBorder
+{
+    border-bottom: solid 2px #FFFFFF;
+}
+
+/* build search frame*/
+.SearchInternalFrame
+{
+    border-left: solid 1px #EDA41A;
+    border-right: solid 1px #EDA41A;
+    border-bottom: solid 1px #EDA41A;
+    border-top: solid 1px #EDA41A;
+    text-align:left;
+    vertical-align:top;
+   
+}
+.SearchExternalFrame
+{
+    border-left: solid 2px #FFFFFF;
+    border-bottom:solid 2px #FFFFFF;
+    border-right:solid 2px #FFFFFF;
+    border-top:solid 0px #FFFFFF;
+    
+}
+.SearchRightBottomBorder
+{
+    border-bottom: solid 1px #BCAC95;
+    border-right: solid 1px #BCAC95;
+    
+}
+.SearchFarRightBottomBorder
+{
+    border-bottom: solid 1px #E1D2B1;
+    border-right: solid 1px #E1D2B1;
+    
+}
+.SearchTitle
+{
+    background-color: #FEC343;
+    width: 120px;
+    text-align: center;
+    border-left: solid 2px #FFFFFF;
+    border-top: solid 2px #FFFFFF;
+    border-bottom: solid 2px #FEC343;
+    font-weight: bold;
+    
+}
+.SearchTitleBottomBorder
+{
+    border-bottom: solid 2px #FFFFFF;
+}
+.StaticSection
+{
+     background-color:#FFEECC;
+     text-align:left;
+}
+.DynamicSection
+{
+    background-color:White;
+    text-align:left;
+    
+}
+.OtherSection
+{
+     background-color:#EEEEEE;
+     text-align:left;
+}
+
+.ButtonsSection
+{
+    background-color:#FFEECC;
+    border-top:solid 1px #CCCCCC;
+    padding: 3px 3px 4px 12px;
+    width:100%;
+    
+}
+
+.LtSearchCol
+{
+	vertical-align:top;
+	text-align:left;
+	white-space:nowrap;
+}
+
+.RtSearchCol
+{
+	vertical-align:top;
+	text-align:right;
+	white-space:nowrap;
+}
+
+A.LinkButton
+{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 9pt;
+    color: #333290;
+    vertical-align: middle;
+    text-decoration:underline;
+}
+A.LinkButton:hover
+{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 9pt;
+    color: red;
+    vertical-align: middle;
+    text-decoration:underline;
+}
+
+/*Advanced Search*/
+.LeftAdvancedSearch
+{
+    width:1px;
+    
+}
+
+/*Grid result sytle*/
+.Result
+{
+    font-size:8pt;
+    width:100%;
+    color:Black;
+}
+.PictureResult
+{
+    border:solid 1px #66AAAA;
+}
+.ResultPageMargins
+{
+    margin-right:12px;
+    text-align:left;
+}
+.ResultHeader
+{
+    background-color:#BBBBBB;
+    font-weight:bold;
+    color:Black;
+    text-decoration:none;
+   
+}
+.ResultGroupHeader
+{
+    background-color:#ffffff;
+    font-weight:bold;
+    color:gray;
+    text-decoration:none;
+    height:50px;
+}
+
+.StatisticHeader
+{
+    background-color:#ffffff;
+    font-size:16px; 
+    font-weight:bold;
+    color:gray;
+    text-decoration:none;
+    height:50px;
+}
+
+.ResultAlternateRow
+{
+    background-color:#E5F1F1;
+}
+
+.ResultRow
+{
+    background-color:#FFFFFF;
+}
+
+.ResultAltRow
+{
+    background-color:#E5F1F1;
+}
+
+.CeCtNW
+{
+	text-align: center;
+	white-space: nowrap;
+}
+
+.CeLtNW
+{
+	text-align: left;
+	white-space: nowrap;
+}
+
+.CeRtNW
+{
+	text-align: right;
+	white-space: nowrap;
+}
+
+.instructions
+{
+	font-style:italic;
+}
+
+.warnings
+{
+    font-weight:bold;
+    font-size:9pt;
+    color:#990000;
+    background-color:Transparent;
+}
+.warningsLarge
+{
+    font-weight:bold;
+    font-size:12pt;
+    color:#990000;
+    background-color:Transparent;
+}
+
+.SelectedRow
+{
+    background-color:#D1DDF1;
+    font-weight:bold;
+    color:#333333;
+}
+.SearchCriteria
+{
+    text-align:left;
+    height:1px;
+    width:100%;
+    background-color:Transparent;
+}
+
+.UNSelectedView
+{
+    border-bottom:solid 1px #FFFFFF;    
+}
+.SelectedView
+{
+    border-bottom:solid 1px #66AAAA;
+    
+}
+.ViewStatuses
+{
+    background-color:Transparent;
+    color:Black;
+    border-bottom:solid 2px #FFFFFF;
+}
+.ViewReportOptions
+{
+    background-color:Transparent;
+    border-width:0px;
+}
+
+/*---------------*/
+.ResultInternalTop
+{
+    background-color:White;
+    border-left: solid 0px #FFFFFF;
+    border-right: solid 0px #FFFFFF;
+    border-bottom: solid 0px #FFFFFF;
+    border-top: solid 2px #EEF4F4;
+    text-align:left;
+    vertical-align:top;
+    width:100%;        
+}
+.ResultInternalFrame
+{
+    border-left: solid 1px #66AAAA;
+    border-bottom:solid 1px #66AAAA;
+    border-right:solid 1px #66AAAA;
+    border-top:solid 3px #66AAAA;
+    width:100%;
+}
+.ResultExternalBorder
+{
+    border-bottom: solid 2px #FFFFFF;
+    border-right: solid 2px #FFFFFF;
+    border-left:solid 2px #FFFFFF;    
+    width:100%;
+}
+.ResultFarRightBottomBorder
+{
+    border-bottom: solid 2px #BCB99A;
+    border-right: solid 1px #BCB99A;
+    width:100%;
+}
+/*Picture view*/
+.PicView
+{
+    background-color:White;
+    width:100%;
+    text-align:left;
+    /*border:solid 1px #7994AF;*/
+}
+.PicViewTop
+{
+    background-color:#E5F1F1;
+    color:Black;
+}
+.PicViewTopLine
+{
+    background-color:#D5E1E1;
+    color:Black;
+}
+.PicViewLabel
+{
+    color:Gray;
+    white-space:nowrap;
+}
+.ConfidentialLabel
+{
+	color:Red;
+	font-weight:bold;
+}
+.PicViewResult
+{
+    color:Black;
+    text-align: left;
+}
+.PicViewBottom
+{
+   /* background-color:#EBEBEB;*/
+   background-color:Transparent;
+}
+.Thumbnail
+{
+	height:120px;
+	width:160px;
+}
+.ThumbnailFrame
+{
+	width:160px;
+}
+/*Advanced search page*/
+.DisplayFormatSection
+{
+    background-color:#EEEEEE;
+    border-bottom:solid 1px #CCCCCC;
+    text-align:left;
+}
+
+/*Tip Sections*/
+.TipTitleBottomBorder
+{
+    border-bottom: solid 2px #FFFFFF;
+}
+.TipFarRightBottomBorder
+{
+    border-bottom: solid 1px #E1D2B1;
+    border-right: solid 1px #E1D2B1;
+    width:100%;
+}
+.TipRightBottomBorder
+{
+    border-bottom: solid 1px #BCAC95;
+    border-right: solid 1px #BCAC95;
+    width:100%;
+}
+.TipExternalFrame
+{
+    border-left: solid 2px #FFFFFF;
+    border-bottom:solid 2px #FFFFFF;
+    border-right:solid 2px #FFFFFF;
+    border-top:solid 0px #FFFFFF;
+    width:100%;
+}
+.TipInternalFrame
+{
+    border-left: solid 1px #66AAAA;
+    border-right: solid 1px #66AAAA;
+    border-bottom: solid 1px #66AAAA;
+    border-top: solid 1px #66AAAA;
+    text-align:left;
+    vertical-align:top;
+    width:100%;
+}
+.TipFarRightBottomBorder
+{
+    border-bottom: solid 1px #E1D2B1;
+    border-right: solid 1px #E1D2B1;
+    width:100%;
+    background-color:#FFF8F8;
+    font-size: 8pt;
+}
+
+A.AnnouncementLink
+{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10pt;
+    color: #333290;
+    vertical-align: top;
+    text-decoration:underline;
+}
+A.AnnouncementLink:hover
+{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10pt;
+    color: red;
+    vertical-align: top;
+    text-decoration:underline;
+}
+
+A.AnnouncementLinkLarge
+{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8pt;
+    color: #333290;
+    vertical-align: top;
+    text-decoration:underline;
+}
+A.AnnouncementLinkLarge:hover
+{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8pt;
+    color:red;
+    vertical-align: top;
+    text-decoration:underline;
+}
+
+.AnnouncementHeader 
+{
+    font-size: 10pt;
+    font-weight:bold;  
+    color :#000066;
+}
+
+.AnnouncementTitle 
+{
+    font-size: 10pt;
+    font-weight:bold;  
+}
+
+.AnnouncementInternalFrame
+{
+    border-left: solid 0px #AAc2D6;
+    border-right: solid 0px #AAc2D6;
+    border-bottom: solid 0px #AAc2D6;
+    border-top: solid 1px #FFFFFF;
+    text-align:left;
+    vertical-align:top;
+    width:100%;
+    font-size: 8pt;
+    background-color:#FFF8F8;
+}
+
+.AnnouncementDetailsTitle 
+{
+    font-size: 12pt;
+    font-weight:bold;
+    color :#000000;
+    height:25px;
+}
+.AnnouncementDetailsExternalFrame
+{
+    border-left: solid 2px #999999;
+    border-right: solid 2px #999999;
+    border-bottom: solid 2px #999999;
+    border-top: solid 2px #999999;
+    text-align:left;
+    vertical-align:top;
+    width:98%;
+    font-size: 10pt;
+    background-color:#F2F2F2;
+}
+
+.AnnouncementDetailsInternalFrame
+{
+    border-left: solid 0px #AAc2D6;
+    border-right: solid 0px #AAc2D6;
+    border-bottom: solid 0px #AAc2D6;
+    border-top: solid 2px #999999;
+    text-align:left;
+    vertical-align:top;
+    width:100%;
+    font-size: 10pt;
+    background-color:#FFFFFF;
+}
+
+A.ApplicationLink
+{
+    font-style: normal;
+    font-weight: normal;            
+    font-size: 10pt;
+    color: #333290;
+    vertical-align: top;
+    text-decoration:underline;            
+}
+
+A.ApplicationLink:hover
+{
+    font-style: normal;
+    font-weight: normal;            
+    font-size: 10pt;
+    color: red;
+    vertical-align: top;
+    text-decoration:underline;            
+}
+.ApplicationInternalFrame
+{
+    border-left: solid 0px #AAc2D6;
+    border-right: solid 0px #AAc2D6;
+    border-bottom: solid 0px #AAc2D6;
+    border-top: solid 0px #AAc2D6;
+    text-align:left;
+    vertical-align:top;
+    /*width:100%;*/
+    background-color :#F8F4EA;
+}
+
+.HorizontalLine
+{
+	border-bottom: solid 1px #BDAA99;
+	width:100%;
+}
+
+.clientInfoHeader 
+{
+    font-style:normal;
+    font-size: 12pt;
+    font-weight:bold;
+}
+.agentInfoCaption 
+{
+    font-style:normal;   
+    font-weight:bold; 
+}
+.clientInfoLabel 
+{
+    font-style:normal;
+    font-size: 10pt;
+    font-weight:normal; 
+}
+.agentInfoHeader 
+{
+    font-style:normal;
+    font-size: 10pt;
+    font-weight:bold;
+    background-color :#efefef;
+}
+.agentInfoCaption 
+{
+    font-style:normal;    
+    font-weight:bold; 
+}
+.agentInfoCaptionSmall 
+{
+    font-style:normal;
+    font-size:smaller;
+    font-weight:normal; 
+}
+
+.agentInfoLabel 
+{
+    font-style:normal;    
+    font-weight:normal; 
+}
+
+/*Email Sections*/
+.EmailTitleBottomBorder
+{
+    border-bottom: solid 2px #FFFFFF;
+}
+.EmailFarRightBottomBorder
+{
+    border-bottom: solid 1px #E1D2B1;
+    border-right: solid 1px #E1D2B1;
+    width:100%;
+}
+.EmailRightBottomBorder
+{
+    border-bottom: solid 1px #BCAC95;
+    border-right: solid 1px #BCAC95;
+    width:100%;
+}
+.EmailExternalFrame
+{
+    border-left: solid 2px #FFFFFF;
+    border-bottom:solid 2px #FFFFFF;
+    border-right:solid 2px #FFFFFF;
+    border-top:solid 0px #FFFFFF;
+    width:100%;
+}
+.EmailInternalFrame
+{
+    border-left: solid 1px #AAc2D6;
+    border-right: solid 1px #AAc2D6;
+    border-bottom: solid 1px #AAc2D6;
+    border-top: solid 1px #AAc2D6;
+    text-align:left;
+    vertical-align:top;
+    width:100%;
+}
+.EmailFarRightBottomBorder
+{
+    border-bottom: solid 1px #E1D2B1;
+    border-right: solid 1px #E1D2B1;
+    width:100%;
+    background-color:Transparent;
+    font-size: 8pt;
+}
+.CustomizeColumnsTitleBottomBorder
+{
+    border-bottom: solid 2px #FFFFFF;
+}
+.CustomizeColumnsFarRightBottomBorder
+{
+    border-bottom: solid 1px #E1D2B1;
+    border-right: solid 1px #E1D2B1;
+    width:100%;
+}
+.CustomizeColumnsRightBottomBorder
+{
+    border-bottom: solid 1px #BCAC95;
+    border-right: solid 1px #BCAC95;
+    width:100%;
+}
+.CustomizeColumnsExternalFrame
+{
+    border-left: solid 2px #FFFFFF;
+    border-bottom:solid 2px #FFFFFF;
+    border-right:solid 2px #FFFFFF;
+    border-top:solid 0px #FFFFFF;
+    width:100%;
+}
+.CustomizeColumnsInternalFrame
+{
+    border-left: solid 1px #66AAAA;
+    border-right: solid 1px #66AAAA;
+    border-bottom: solid 1px #66AAAA;
+    border-top: solid 1px #66AAAA;
+    text-align:left;
+    vertical-align:top;
+    width:100%;
+}
+.CustomizeColumnsFarRightBottomBorder
+{
+    border-bottom: solid 1px #E1D2B1;
+    border-right: solid 1px #E1D2B1;
+    width:100%;
+    background-color:Transparent ;
+    font-size: 8pt;
+}
+
+
+/* Styles for maps */
+div.MapToolPanel
+{
+	border: silver 1px solid;
+	background-color: red;
+	position: relative;
+	overflow: hidden;
+}
+
+div.MapToolPanelGripper
+{
+	position: relative;
+	overflow: hidden;
+	background-image: url(App_Themes/RS_Default/Images/ThumbBackground.gif);
+}
+
+div.SliderHash
+{
+	background-color: #F0F0F0;
+	border: solid 1px black;
+	cursor: hand;
+	overflow: hidden;
+	position: absolute;
+	width: 12px;
+	height: 1px;
+	z-index: 0;
+}
+
+div.SliderRail
+{
+	background-color: #F0F0F0;
+	border: solid 1px black;
+	cursor: hand;
+	overflow: hidden;
+	position: absolute;
+	width: 2px;
+	height: 118px;
+	z-index: 1;
+}
+
+div.SliderThumb
+{
+	background-color: #20FF20;
+	border: groove 3px gray;
+	color: black;
+	cursor: hand;
+	height: 3px;
+	overflow: hidden;
+	position: absolute;
+	width: 14px;
+	z-index: 2;
+}
+
+.FlyoverView
+{
+    font-size: 8pt;
+    font-family: verdana, helvetica, sans-serif;
+}
+
+/* End Styles for maps */
+
+.TreeNode
+{
+    text-decoration:none;
+    background-color:inherit;
+    color: #333290;
+    font-size:10pt; 
+}
+.TreeNodeSelected
+{
+   text-decoration:none;
+   color: #333290;
+   background-color: #efefef;
+}
+.DragdropPanel
+{
+    border:solid 1px gray;
+    padding:0px 10px 0px 10px; 
+}
+.DragdropPanelItem
+{
+    height:30px;
+    cursor:move;
+    padding:0px 10px 0px 10px; 
+    background-color:#66AAAA;
+    font-weight:bold;
+    color:Black;
+    border:solid 1px gray;
+    text-decoration:none;
+}
+.DragdropPanelItemSelect
+{
+    height:30px;
+    cursor:move;
+    padding:0px 10px 0px 10px; 
+    background-color:#E5F1F1;
+    font-weight:bold;
+    color:Black;
+    text-decoration:none;
+}
+.DragdropPanelItemDrag
+{
+    height:30px;
+    cursor:move;
+    padding:0px 10px 0px 10px; 
+    background-color:black;
+    font-weight:bold;
+    color:white;
+    text-decoration:none;
+}
+
+.Inset
+{
+	border-bottom: solid 1px #E1D2B1;
+    border-top: solid 1px #E1D2B1;
+	text-align: right;
+	background-color: #FFEECC;
+}
+
+/*show update column data on picture view*/
+.UpdateColumn
+{
+	font-weight:bold;
+    font-size:9pt;
+    color:#990000;
+    background-color:Transparent;
+}
+.Login
+{
+	background-color:Transparent;
+	border:solid 1px #EDA41A;
+}
+.LoginLabel
+{
+	font-weight:bold;
+}
+.ChangePassword
+{
+/*	background-color:#EDA41A;
+	border:solid 1px #EDA41A;*/
+	font-weight:bold;
+}
+.LoginCheckBox
+{
+	font-size:smaller;
+}
+.Footer
+{
+	text-align:center;
+	color:Gray;
+}
+/*Schedule Automated Email*/
+.ScheduleBorder
+{
+	border-style:ridge;
+	border:ridge 1px #E1D2B1;
+	background-color:White;
+	text-align:left;
+}
+.RegularButton
+{
+	width:100px;
+	text-align:center;	
+	background-color:White;
+	border:solid 2px #C0D0DF;	
+	
+}
+.DefaultButton
+{
+	width:100px;
+	text-align:center;
+	font-weight:bold;
+	background-color:White;
+	border: solid 2px #FFc243;	
+	 
+}
+
+
+
+.DetailsTitleBottomBorder
+{
+    border-bottom: solid 2px #FFFFFF;
+}
+.DetailsFarRightBottomBorder
+{
+    border-bottom: solid 1px #E1D2B1;
+    border-right: solid 1px #E1D2B1;
+}
+.DetailsRightBottomBorder
+{
+    border-bottom: solid 1px #BCAC95;
+    border-right: solid 1px #BCAC95;
+}
+.DetailsExternalFrame
+{
+    border-left: solid 2px #FFFFFF;
+    border-bottom:solid 2px #FFFFFF;
+    border-right:solid 2px #FFFFFF;
+    border-top:solid 0px #FFFFFF;
+}
+.DetailsInternalFrame
+{
+    border-left: solid 1px #AAc2D6;
+    border-right: solid 1px #AAc2D6;
+    border-bottom: solid 1px #AAc2D6;
+    border-top: solid 1px #AAc2D6;
+    text-align:left;
+    vertical-align:top;
+}
+.DetailsFarRightBottomBorder
+{
+    border-bottom: solid 1px #E1D2B1;
+    border-right: solid 1px #E1D2B1;
+    background-color:Transparent;
+    font-size: 8pt;
+}
+.UpdateRecipient
+{
+	background-color:Transparent;
+	text-align:center;
+	border:solid 1px #BCAC95;
+}
+.InlineDisplay
+{
+	display:inline;
+}
+.Calanderlink
+{
+    font-style:normal;
+    color: #333290;
+    text-decoration:underline;
+    vertical-align:middle;
+    
+}
+
+A.rsMenuLink
+{
+    font-style:normal;
+    font-size: 8pt;
+    color: #338888;
+    text-decoration:none;
+    vertical-align:middle;
+    
+}
+A.rsMenuLink:hover  
+{
+    font-style:normal;
+    font-size: 8pt;
+    color: red;
+    text-decoration:none;
+    vertical-align:middle;   
+}
+
+/* Specific controls */
+
+.iframeAgreement
+{
+    width: 6in;
+    height:6in;
+    border-left: solid 1px #EDA41A;
+    border-right: solid 1px #EDA41A;
+    border-bottom: solid 1px #EDA41A;
+    border-top: solid 1px #EDA41A;
+}
+
+.WelcomePublic
+{
+    padding:4px 2px 2px 10px ;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8pt;
+    color: #000000;
+    width:240px; 
+}
+
+/*
+These styles were copied from rsHyperlink. This was done to reduce the page size. When a CSSClass is specified in
+the tree view, it cause the tree view to add alot of additional markup.
+*/
+
+A.ctl00_cph1_sa_tv_0
+{
+    font-style:normal;
+    font-size: 9pt;
+    color: #333290;
+    text-decoration:underline;
+    vertical-align:middle;
+}
+A.ctl00_cph1_sa_tv_0:hover  
+{
+    font-style:normal;
+    font-size: 9pt;
+    color: red;
+    text-decoration:underline;
+    vertical-align:middle;        
+}
+
+
+/* hover menu for search results*/
+.rsHoverMenuLink
+{
+    padding : 0px 2px 2px 2px;
+    border:solid 1px gray; 
+    cursor:pointer; 
+}
+.rsHoverMenuLinkWithIcon
+{
+    padding : 0px 0px 0px 0px;
+    border:solid 1px gray; 
+    cursor:pointer; 
+}
+.rsHoverMenu
+{
+    background-color : White;
+    border  : solid 1px black;
+    width   : 200px;
+    padding : 4px 4px 4px 4px;
+}
+.rsHoverMenuItem
+{
+    height:18px;
+    vertical-align : middle;
+    padding-bottom : 0px;
+}
+
+.seatheader
+{
+	background-color: #A9A9A9;
+	color: Black;
+	font-style:normal;
+    font-size: 9pt;
+	}
+.seatrow1
+{
+	background-color: white ;
+	color: Black;
+	font-style:normal;
+    font-size: 9pt;
+	}
+.seatrow2
+{
+	background-color: #B0E0E6;
+	color: Black;
+	font-style:normal;
+    font-size: 9pt;
+}
+
+.customPushPinIcon
+{
+    position: relative;
+    top: -20px;
+    left: 0px;
+}
+
+.customPushPinIconStickey
+{
+    position: relative;
+    top: -20px;
+    left: 0px;
+    border:solid 1px #000000;
+    background-color : #efefef;
+}
+.customInfoBox-body
+{
+    z-index : 99999;
+}
+	
+.StoreInfoHeader 
+{
+    font-style:normal;
+    font-size: 9pt;
+    font-weight:bold;
+    white-space:nowrap;    
+}
+
+.banner-smaller-font
+{
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.portal-foreground
+{
+	background-color: #ffffff;
+	border-bottom: 1px solid #338888;
+	border-left: 1px solid #338888;
+	border-right: 1px solid #338888;
+	border-top: 1px solid #338888;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	width: 800px;
+}
