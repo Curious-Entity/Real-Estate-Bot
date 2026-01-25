@@ -1,87 +1,68 @@
+"""
+setup_auth.py
+
+Open Matrix login in a real Chrome window, let you log in manually (including 2FA),
+then save Playwright storage_state to state.json for scan_matrix.py.
+
+Notes:
+- If you ever land on the XML/SAML error page (AuthnRequestResponder.ashx),
+  just type https://connect.mlslistings.com/ in that SAME tab and proceed.
+"""
+
 import os
-import time
 from pathlib import Path
-from dotenv import load_dotenv
+
+try:
+    from dotenv import load_dotenv
+except Exception:
+    load_dotenv = None
+
 from playwright.sync_api import sync_playwright
 
-ENV_PATH = Path(__file__).with_name(".env")
-load_dotenv(dotenv_path=ENV_PATH, override=True)
 
-LOGIN_URL = os.environ.get("MATRIX_LOGIN_URL", "").strip()
-CHANNEL = os.environ.get("BROWSER_CHANNEL", "chrome").strip().lower()
+def _env_str(name: str, default: str = "") -> str:
+    v = os.getenv(name)
+    return default if v is None else str(v)
 
-# Save state.json next to this file (NOT relative to current working directory)
-STATE_PATH = Path(__file__).with_name("state.json")
 
-if not LOGIN_URL:
-    raise RuntimeError(f"MATRIX_LOGIN_URL missing in {ENV_PATH}")
+def main():
+    root = Path(__file__).resolve().parent
+    env_path = root / ".env"
+    if load_dotenv is not None:
+        load_dotenv(dotenv_path=env_path, override=True)
 
-MENU_TEXT = "MY MATRIX"
-CONNECT_URL = os.environ.get("MATRIX_RESULTS_URL", "").strip()
+    login_url = _env_str("MATRIX_LOGIN_URL", "https://search.mlslistings.com/Matrix/").strip()
+    channel = _env_str("BROWSER_CHANNEL", "chrome").strip() or "chrome"
+    state_path = root / "state.json"
 
-def any_page_has_text(context, text: str) -> bool:
-    for pg in context.pages:
-        try:
-            if pg.is_closed():
-                continue
-            if pg.locator(f"text={text}").count() > 0:
-                return True
-        except Exception:
-            continue
-    return False
+    print(f"Using MATRIX_LOGIN_URL = {login_url}")
+    print(f"Using channel         = {channel}")
+    print(f"Env file path         = {env_path}")
+    print("")
+    print("In the browser window:")
+    print("1) If you see the XML/SAML error page at connect.mlslistings.com/SAML/AuthnRequestResponder.ashx")
+    print("   then in that SAME window, type this URL in the address bar and press Enter:")
+    print("   https://connect.mlslistings.com/")
+    print("2) Log in normally (do 2FA if required).")
+    print("3) Stop when you can see the Matrix interface (top menu like MY MATRIX / SEARCH).")
+    print("4) Come back here and press Enter to save the session.")
+    print("")
 
-def first_page_with_text(context, text: str):
-    for pg in context.pages:
-        try:
-            if pg.is_closed():
-                continue
-            if pg.locator(f"text={text}").count() > 0:
-                return pg
-        except Exception:
-            continue
-    return None
+    with sync_playwright() as p:
+        browser = p.chromium.launch(channel=channel, headless=False)
+        context = browser.new_context(viewport={"width": 1600, "height": 900})
+        page = context.new_page()
+        page.goto(login_url, wait_until="domcontentloaded")
 
-print("Using MATRIX_LOGIN_URL =", LOGIN_URL)
-print("Using channel          =", CHANNEL)
-print("Env path               =", ENV_PATH)
-print("Will save state to     =", STATE_PATH)
+        input("After you are logged in and can see Matrix normally, press Enter here... ")
 
-with sync_playwright() as p:
-    browser = p.chromium.launch(channel=CHANNEL, headless=False)
-    context = browser.new_context()
-    page = context.new_page()
-    page.goto(LOGIN_URL, wait_until="domcontentloaded")
+        # Save session
+        context.storage_state(path=str(state_path))
+        print(f"Saved session to {state_path}")
 
-    print("\nLogin in the browser window.")
-    print("After you can see the Matrix menu, press Enter here to save state.json.\n")
+        context.close()
+        browser.close()
 
-    deadline = time.time() + 300
-    while time.time() < deadline:
-        # Recover if stuck on responder
-        for pg in list(context.pages):
-            try:
-                if pg.is_closed():
-                    continue
-                if "AuthnRequestResponder" in pg.url:
-                    pg.goto(CONNECT_URL, wait_until="domcontentloaded")
-            except Exception:
-                continue
 
-        if any_page_has_text(context, MENU_TEXT):
-            break
-        time.sleep(1)
-
-    if not any_page_has_text(context, MENU_TEXT):
-        raise RuntimeError("Login not detected within 5 minutes (MY MATRIX not found).")
-
-    # IMPORTANT: visit connect domain before saving state, so cookies for that domain exist too
-    page.goto(CONNECT_URL, wait_until="domcontentloaded")
-    page.wait_for_timeout(1000)
-
-    input("Press Enter to save state.json...")
-
-    context.storage_state(path=str(STATE_PATH))
-    context.close()
-    browser.close()
-
-print(f"Saved session to {STATE_PATH}")
+if __name__ == "__main__":
+    main()
